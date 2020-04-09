@@ -1,7 +1,17 @@
-<div class="books-category">
-  <div class="books-category-inside" *ngFor = "let bookCat of bookCategories">
-    <a routerLink="/books-categories/{{ bookCat.id }}/books">
-      {{bookCat.name}}
-    </a>
-  </div>
+<div class="main">
+  <span class="books-category">
+    <div class="books-category-inside" *ngFor = "let bookCat of bookCategories">
+      <a routerLink="/books-categories/{{ bookCat.id }}/books">
+        {{bookCat.name}}
+      </a>
+    </div>
+  </span>
+
+  <span class="allBooks" *ngFor = "let books of allBooks">
+    <div class="border">
+      <img *ngIf="books.imagesLinks" [src]="books.imagesLinks" [alt]="books.name">
+      <p class="bookName">{{books.name}}</p>
+      <p class="bookAuthor">{{books.author}}</p>
+    </div>
+  </span>
 </div>

@@ -1,3 +1,5 @@
+import {books} from './books';
+
 export interface Category {
   id: number;
   name: string;
@@ -35,3 +37,5 @@ export const bookCategories: Category[] = [
     booksList: [35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
   }
 ];
+
+export const allBooks = books;
