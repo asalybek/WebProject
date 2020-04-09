@@ -6,6 +6,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { BooksCategoriesComponent } from './books-categories/books-categories.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { ComicsDetailComponent } from './comics-detail/comics-detail.component';
+import { ComicsCategoriesComponent } from './comics-categories/comics-categories.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ComicsDetailComponent } from './comics-detail/comics-detail.component';
     CategoriesComponent,
     BooksCategoriesComponent,
     BookDetailComponent,
-    ComicsDetailComponent
+    ComicsDetailComponent,
+    ComicsCategoriesComponent
   ],
   imports: [
     BrowserModule
