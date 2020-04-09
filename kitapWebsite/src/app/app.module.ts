@@ -7,11 +7,6 @@ import { CategoriesComponent } from './categories/categories.component';
 import { BooksCategoriesComponent } from './books-categories/books-categories.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { ComicsDetailComponent } from './comics-detail/comics-detail.component';
-import { Route, RouterModule } from '@angular/router';
-
-const routes: Route[] = [
-  {path: 'books-categories', component: BooksCategoriesComponent},
-];
 
 @NgModule({
   declarations: [
@@ -23,8 +18,7 @@ const routes: Route[] = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
