@@ -2,10 +2,16 @@
   font-family: "kitap-font-regular";
   src: url("fonts/sf_pro_regular.woff") format('woff');
 }
+@font-face {
+  font-family: "kitap-font-light";
+  src: url("fonts/sf_pro_light.woff") format('woff');
+}
 header{
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+
 }
 *{
   box-sizing: border-box;
@@ -26,6 +32,8 @@ li, a, button, input{
   height: 109px;
   display:flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   padding: 30px 10%;
 }
@@ -95,9 +103,18 @@ input{
   outline:0;
   color:#fe793c;
 }
-input:hover{
+input:hover {
   border-style: none;
 }
+
+/*.footer {*/
+/*  position: fixed;*/
+/*  left: 0;*/
+/*  bottom: 0;*/
+/*  width: 100%;*/
+/*  background-color: #333;*/
+/*  text-align: center;*/
+/*}*/
 
 
 

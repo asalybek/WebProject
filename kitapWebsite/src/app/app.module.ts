@@ -6,6 +6,8 @@ import { CategoriesComponent } from './categories/categories.component';
 import { BooksCategoriesComponent } from './books-categories/books-categories.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { ComicsDetailComponent } from './comics-detail/comics-detail.component';
+import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,10 +15,12 @@ import { ComicsDetailComponent } from './comics-detail/comics-detail.component';
     CategoriesComponent,
     BooksCategoriesComponent,
     BookDetailComponent,
-    ComicsDetailComponent
+    ComicsDetailComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
