@@ -1,1 +1,7 @@
-<p>books-categories works!</p>
+<div class="books-category">
+  <div class="books-category-inside" *ngFor = "let bookCat of bookCategories">
+    <a routerLink="/books-categories/{{ bookCat.id }}/books">
+      {{bookCat.name}}
+    </a>
+  </div>
+</div>
