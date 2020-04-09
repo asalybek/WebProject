@@ -2,15 +2,24 @@
   font-family: "kitap-font-regular";
   src: url("fonts/sf_pro_regular.woff") format('woff');
 }
+@font-face {
+  font-family: "kitap-font-light";
+  src: url("fonts/sf_pro_light.woff") format('woff');
+}
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 
+}
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: white;
 }
-
-li, a, button{
+li, a, button, input{
   font-family: kitap-font-regular, sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -18,14 +27,20 @@ li, a, button{
   text-decoration: none;
 }
 
-header{
+.nav_bar{
+  width: 1200px;
+  height: 109px;
   display:flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   padding: 30px 10%;
 }
 
 .logo{
+  height: 34px;
+  width: 192px;
   cursor: pointer;
 }
 
@@ -47,17 +62,59 @@ header{
 }
 
 button{
-  padding: 9px;
+  padding: 12px 40px;
   background-color: #fe793c;
   border:none;
-  border-radius: 50px;
+  border-radius: 1px;
   transition: all 0.3s ease 0s;
   cursor: pointer;
+  color: white;
 }
 
 button:hover{
   background-color: #fa5837;
 }
+
+
+/*                                             */
+
+
+.first_div{
+  position: relative;
+}
+
+.search_box{
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 48px;
+  width: 592px;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  padding: 1px 32px 1px 12px;
+}
+input{
+  width: 100%;
+  text-align: start;
+  margin:14px;
+  border: none;
+  background: url("https://image.flaticon.com/icons/svg/149/149309.svg") no-repeat right center;
+  outline:0;
+  color:#fe793c;
+}
+input:hover {
+  border-style: none;
+}
+
+/*.footer {*/
+/*  position: fixed;*/
+/*  left: 0;*/
+/*  bottom: 0;*/
+/*  width: 100%;*/
+/*  background-color: #333;*/
+/*  text-align: center;*/
+/*}*/
 
 
 
