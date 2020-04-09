@@ -1,0 +1,28 @@
+.books-category{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  position: relative;
+  box-sizing: border-box;
+  width: 250px;
+  padding: 15px 20px;
+  margin: 30px;
+}
+
+.books-category a{
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+
+.books-category a:hover{
+  color:#fe793c ;
+}
+
+.books-category-inside{
+  margin: 10px;
+}
