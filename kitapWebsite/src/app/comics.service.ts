@@ -11,6 +11,9 @@ export class ComicsService {
   getCategoryType(): Observable<ComicsCategories[]>{
     return of(comicCategoryList);
   }
+  getAllComics(): Observable<Comics[]>{
+    return of(comicsList);
+  }
   getComics(id: number): Observable<Comics>{
     return of(comicsList.find(comics => comics.id === id));
   }

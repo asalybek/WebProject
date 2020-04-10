@@ -5,26 +5,36 @@
   <body>
     <header>
       <div class="nav_bar">
-        <img class="logo" src="https://kitap.kz/images/logo/orange-logo.svg" alt="logo">
+        <img class="logo" routerLink="/home" src="https://kitap.kz/images/logo/orange-logo.svg" alt="logo">
         <nav>
           <ul class="nav_links">
-            <li><a href="#">Кітап</a></li>
-            <li><a href="#">Комикс</a></li>
+            <li><a routerLink="/books">Кітап</a></li>
+            <li><a routerLink="/comic">Комикс</a></li>
           </ul>
         </nav>
         <a class="login" routerLink="/login"><button>Кіру</button></a>
       </div>
-
-<!--      <div class="first_div">-->
-<!--        <img src="https://bridge315.qodeinteractive.com/wp-content/uploads/2020/01/p1-title-img-01.jpg">-->
-<!--        <form class="search_box">-->
-<!--          <label>-->
-<!--            <input type="text" name="search-text" placeholder="Сайт бойынша іздеу" >-->
-<!--          </label>-->
-<!--        </form>-->
-<!--      </div>-->
-<!--      <div class="footer">-->
-<!--      </div>-->
     </header>
+
     <router-outlet></router-outlet>
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <img src="https://kitap.kz/images/logo/logo-white.svg">
+
+        <p class="footer-company-name">© 2019 "Ұлттық аударма бюросы" қоғамдық қоры</p>
+      </div>
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>Құпиялық саясаты</span>
+          <span>Қолданушылық келісімі</span>
+          <span>Байланыс</span>
+        </p>
+
+      </div>
+
+    </footer>
   </body>
+

@@ -17,7 +17,7 @@ header{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: white;
+  font-family: kitap-font-regular;
 }
 li, a, button, input{
   font-family: kitap-font-regular, sans-serif;
@@ -76,49 +76,44 @@ button:hover{
 }
 
 
-/*                                             */
 
 
-.first_div{
-  position: relative;
-}
-
-.search_box{
+.footer-distributed{
+  background: #333333;
   box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 48px;
-  width: 592px;
-  transform: translate(-50%, -50%);
-  border-radius: 2px;
-  padding: 1px 32px 1px 12px;
-}
-input{
   width: 100%;
-  text-align: start;
-  margin:14px;
-  border: none;
-  background: url("https://image.flaticon.com/icons/svg/149/149309.svg") no-repeat right center;
-  outline:0;
-  color:#fe793c;
-}
-input:hover {
-  border-style: none;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+  display: flex;
+  justify-content: space-around;
 }
 
-/*.footer {*/
-/*  position: fixed;*/
-/*  left: 0;*/
-/*  bottom: 0;*/
-/*  width: 100%;*/
-/*  background-color: #333;*/
-/*  text-align: center;*/
-/*}*/
+/* Footer left */
+.footer-distributed .footer-company-name{
+  color:  white;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Right */
 
 
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
 
-
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
 
 
 

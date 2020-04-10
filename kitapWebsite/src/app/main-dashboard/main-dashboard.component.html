@@ -1,0 +1,26 @@
+      <div class="first_div">
+        <img src="https://bridge315.qodeinteractive.com/wp-content/uploads/2020/01/p1-title-img-01.jpg">
+        <form class="search_box">
+          <label>
+            <input type="text" name="search-text" placeholder="Сайт бойынша іздеу" >
+          </label>
+        </form>
+      </div>
+      <div class="footer">
+      </div>
+      <h1>ҮЗДІК КОМИКСТАР</h1>
+<div class="comics_dashboard">
+  <a *ngFor="let comics of comics" class="col-1-4">
+    <div class="comics_items">
+      <img src="{{comics.poster}}"/>
+    </div>
+  </a>
+</div>
+      <h1>ҮЗДІК КІТАПТАР</h1>
+<!--      <div class="books_dashboard">-->
+<!--        <a *ngFor="let books of books" class="col-1-4">-->
+<!--          <div class="books_items">-->
+<!--            <img src="{{books.imagesLinks}}"/>-->
+<!--          </div>-->
+<!--        </a>-->
+<!--      </div>-->
