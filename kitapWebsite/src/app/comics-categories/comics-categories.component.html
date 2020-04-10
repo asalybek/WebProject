@@ -1,7 +1,19 @@
-<ul class = "categoryType" >
-  <li *ngFor="let comicsCategory of comicsCategoryList">
-    <a routerLink="/categories/{{comicsCategory.id}}/products">
-      <h2>{{comicsCategory.name}}</h2>
-    </a>
-  </li>
-</ul>
+<div class="comic_category_page">
+  <h1>Комикстар</h1>
+  <img src="https://image.flaticon.com/icons/svg/167/167755.svg"/>
+  <ul class = "comics-category" >
+    <li *ngFor="let comicsCategory of comicsCategoryList">
+      <a routerLink="/comic/{{comicsCategory.name}}/all">
+        <br> {{comicsCategory.name}}
+      </a>
+    </li>
+  </ul>
+
+  <div class="all_comics">
+    <div class="each_comics" *ngFor="let comics of comicsList">
+      <a routerLink="/comic/{{comics.comic_category_name}}/all/{{comics.id}}">
+        <img class="comics-image" src="{{comics.poster}}"/>
+      </a>
+    </div>
+  </div>
+</div>
