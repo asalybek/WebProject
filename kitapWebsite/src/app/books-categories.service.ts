@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {bookCategories} from './books-categories';
+import {bookCategories, Category} from './books-categories';
 import {Observable, of} from 'rxjs';
 import {Book, books} from './books';
 
@@ -8,10 +8,16 @@ import {Book, books} from './books';
 })
 export class BooksCategoriesService {
 
-  bookCategories = bookCategories;
+  getCategoryType(): Observable<Category[]>{
+    return of(bookCategories);
+  }
 
-  getBooksByCategoryId(categoryId: number): Observable<Book[]> {
-    return of(books.filter(b => this.bookCategories.find(c => c.id === categoryId).booksList.includes(b.id)));
+  getBooks(id: number): Observable<Book>{
+    return of(books.find(comics => comics.id === id));
+  }
+
+  getBooksByCategory(name: string): Observable<Book[]> {
+    return of(books.filter(comics => comics.book_category_name === name));
   }
 
   constructor() { }
