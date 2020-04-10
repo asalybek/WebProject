@@ -2,10 +2,12 @@
   <div class="books-category">
     <div class="books-category-inside" *ngFor = "let bookCat of bookCategories">
       <a routerLink="/books/{{ bookCat.id }}/books">
+
         {{bookCat.name}}
       </a>
     </div>
   </div>
+
 
   <div class="allBooks" >
     <div class="border" *ngFor = "let books of allBooks">
@@ -14,4 +16,5 @@
       <p class="bookAuthor">{{books.author}}</p>
     </div>
   </div>
+
 </div>

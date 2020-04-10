@@ -1,0 +1,9 @@
+<div class="book_detail_page" >
+  <div class="book_detail_content" *ngFor="let book of books" >
+    <div class="border">
+      <img *ngIf="book.imagesLinks" [src]="book.imagesLinks" [alt]="book.name">
+      <p class="bookName">{{book.name}}</p>
+      <p class="bookAuthor">{{book.author}}</p>
+    </div>
+  </div>
+</div>

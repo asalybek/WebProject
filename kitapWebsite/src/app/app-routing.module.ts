@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BooksCategoriesComponent} from './books-categories/books-categories.component';
+
+import {BookListComponent} from './book-list/book-list.component';
+import {LoginComponent} from "./login/login.component";
 import {LoginComponent} from './login/login.component';
 import {MainDashboardComponent} from './main-dashboard/main-dashboard.component';
 import {ComicsCategoriesComponent} from './comics-categories/comics-categories.component';
 import {ComicsDetailComponent} from './comics-detail/comics-detail.component';
 import {ComicsListComponent} from './comics-list/comics-list.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
