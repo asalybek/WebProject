@@ -13,6 +13,7 @@
       <a routerLink="/comic/{{comics.comic_category_name}}/all/{{comics.id}}">
         <img class="comics-image" src="{{comics.poster}}"/>
       </a>
+        <input  [(ngModel)]="comics.rating" />
     </div>
   </div>
 </div>

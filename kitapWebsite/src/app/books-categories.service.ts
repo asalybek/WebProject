@@ -9,20 +9,19 @@ import {DashboardItems, dashList} from './dashboard-items';
   providedIn: 'root'
 })
 export class BooksCategoriesService {
-
+  constructor() { }
   getCategoryType(): Observable<Category[]>{
     return of(bookCategories);
   }
 
   getBooks(id: number): Observable<Book>{
-    return of(books.find(comics => comics.id === id));
+    return of(books.find(book => book.id === id));
   }
 
   getBooksByCategory(name: string): Observable<Book[]> {
-    return of(books.filter(comics => comics.book_category_name === name));
+    return of(books.filter(book => book.book_category_name === name));
   }
   getAllItems(): Observable<DashboardItems[]>{
     return of(dashList);
   }
-  constructor() { }
 }

@@ -1,14 +1,14 @@
 <div class="main">
   <div class="books-category">
     <div class="books-category-inside" *ngFor = "let bookCat of bookCategories">
-      <a routerLink="/books-categories/{{ bookCat.name }}/all">
+      <a routerLink="/books/{{ bookCat.name }}/all">
         {{bookCat.name}}
       </a>
     </div>
   </div>
 
   <div class="books" *ngFor="let book of booksList">
-    <a routerLink="/books-categories/{{book.book_category_name}}/all/{{book.id}}">
+    <a routerLink="/books/{{book.book_category_name}}/all/{{book.id}}">
       <div class="border">
         <img *ngIf="book.imagesLinks" [src]="book.imagesLinks" [alt]="book.name">
         <p class="bookName">{{book.name}}</p>

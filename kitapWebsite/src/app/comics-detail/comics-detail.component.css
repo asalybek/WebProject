@@ -20,9 +20,20 @@ body { font-family: sans-serif; }
 }
 h1{
   width: fit-content;
-  margin: 32px;
   font-size: 24px;
   color: black;
   font-weight: bold;
   border: 2px solid #fe793c;
+}
+input{
+  width: 40px;
+  text-align: center;
+  margin:14px;
+  border: 6px dotted black;
+  color:#fe793c;
+  font-weight: bold;
+  font-size: 16px;
+}
+label{
+  font-size: 18px;
 }

@@ -4,11 +4,13 @@ export interface Comics{
   content: string[];
   id: number;
   comic_category_name: string;
+  rating: number;
 }
 
 export const comicsList: Comics[] = [
   {   poster: 'https://qazcomics.kz/wp-content/uploads/2020/02/Aisha_Bibi_1-724x1024.jpg',
     name: 'Айша-бибі',
+    rating: 5,
     content: ['https://qazcomics.kz/wp-content/uploads/2020/02/Aisha_Bibi_kz_3-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/02/Aisha_Bibi_kz_4-724x1024.jpg',
       'https://qazcomics.kz/wp-content/uploads/2020/02/Aisha_Bibi_kz_5-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/02/Aisha_Bibi_kz_6-1-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/02/Aisha_Bibi_kz_3-724x1024.jpg',
       'https://qazcomics.kz/wp-content/uploads/2020/02/Aisha_Bibi_kz_7-1-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/02/Aisha_Bibi_kz_8-2-724x1024.jpg',
@@ -23,6 +25,7 @@ export const comicsList: Comics[] = [
   {
     poster: 'https://qazcomics.kz/wp-content/uploads/2019/02/ENLIK-KEBEK-kaz-1-724x1024.jpg',
     name: 'Еңлік-Кебек',
+    rating: 4.5,
     content: ['https://qazcomics.kz/wp-content/uploads/2019/02/ENLIK-KEBEK-kaz1-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/02/ENLIK-KEBEK-kaz2-724x1024.jpg',
       'https://qazcomics.kz/wp-content/uploads/2019/02/ENLIK-KEBEK-kaz3-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/02/ENLIK-KEBEK-kaz4-724x1024.jpg',
       'https://qazcomics.kz/wp-content/uploads/2019/02/ENLIK-KEBEK-kaz5-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/02/ENLIK-KEBEK-kaz6-724x1024.jpg',
@@ -37,6 +40,7 @@ export const comicsList: Comics[] = [
   {
     poster: 'https://qazcomics.kz/wp-content/uploads/2019/02/Oblozhka-dlya-komiksa-kaz-724x1024.jpg',
     name: 'Қозы-к0рпеш Баян-сұлу',
+    rating: 5,
     content: ['https://qazcomics.kz/wp-content/uploads/2019/02/Stranica1cvet-kaz-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/02/Stranica2cvet-kaz-1-724x1024.jpg',
       'https://qazcomics.kz/wp-content/uploads/2019/02/Stranica3cvet-kaz-1-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/02/Stranica4cvet-kaz-1-724x1024.jpg',
       'https://qazcomics.kz/wp-content/uploads/2019/02/Stranica5cvet-kaz-1-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/02/Stranica6cvet-kaz-1-724x1024.jpg',
@@ -50,6 +54,7 @@ id: 103,
 },
 { poster: 'https://qazcomics.kz/wp-content/uploads/2019/12/Page_1_kaz-724x1024.jpg',
   name: 'Ер Төстік',
+  rating: 4.8,
   content: ['https://qazcomics.kz/wp-content/uploads/2019/12/Page_2_kaz-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/12/Page_3_kaz-724x1024.jpg',
   'https://qazcomics.kz/wp-content/uploads/2019/12/Page_4_kaz-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/12/Page_5_kaz-724x1024.jpg',
   'https://qazcomics.kz/wp-content/uploads/2019/12/Page_6_kaz-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/12/Page_7_kaz-724x1024.jpg',
@@ -64,6 +69,7 @@ id: 103,
 },
 {   poster: 'https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus1-724x1024.jpg',
   name: 'Алпамыс батыр',
+  rating: 5,
   content: ['https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus2-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus3-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus4-724x1024.jpg',
   'https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus5-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus6-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus7-724x1024.jpg',
   'https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus8-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus9-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/alpamys_rus10-724x1024.jpg',
@@ -76,6 +82,7 @@ id: 103,
 {
   poster: 'https://qazcomics.kz/wp-content/uploads/2019/10/Page_1-724x1024.jpg',
   name: 'Естай-Хорлан',
+  rating: 5,
     content: ['https://qazcomics.kz/wp-content/uploads/2019/10/Page_2-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/10/Page_3-1-724x1024.jpg',
   'https://qazcomics.kz/wp-content/uploads/2019/10/Page_4-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/10/Page_5-724x1024.jpg',
   'https//qazcomics.kz/wp-content/uploads/2019/10/Page_6-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/10/Page_7-724x1024.jpg',
@@ -90,6 +97,7 @@ id: 103,
 },
 {   poster: 'https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_1-724x1024.jpg',
   name: 'Балхаш',
+  rating: 5,
   content: ['https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_2-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_3-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_4-724x1024.jpg',
   'https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_5-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_6-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_7-724x1024.jpg',
   'https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_8-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_9-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2020/01/Balkhash_10-724x1024.jpg',
@@ -103,6 +111,7 @@ id: 103,
 {
   poster: 'https://qazcomics.kz/wp-content/uploads/2019/02/jum_kaz_0-724x1024.jpg',
   name: 'Жұмбақтас',
+  rating: 5,
     content: ['https://qazcomics.kz/wp-content/uploads/2019/02/jum_kaz_1-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/02/jum_kaz_2-724x1024.jpg',
   'https://qazcomics.kz/wp-content/uploads/2019/02/jum_kaz_3-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/02/jum_kaz_4-724x1024.jpg',
   'https://qazcomics.kz/wp-content/uploads/2019/02/jum_kaz_5-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/02/jum_kaz_6-724x1024.jpg',
@@ -117,6 +126,7 @@ id: 103,
   {
     poster: 'https://qazcomics.kz/wp-content/uploads/2019/01/Cover_RUS-724x1024.jpg',
     name: 'Шайтанкөл',
+    rating: 5,
     content: ['https://qazcomics.kz/wp-content/uploads/2019/01/Str_1_RUS-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/01/Str_2_RUS-724x1024.jpg',
       'https://qazcomics.kz/wp-content/uploads/2019/01/Str_3_RUS-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/01/Str_4_RUS-724x1024.jpg',
       'https://qazcomics.kz/wp-content/uploads/2019/01/Str_5_RUS-724x1024.jpg', 'https://qazcomics.kz/wp-content/uploads/2019/01/Str_6_RUS-724x1024.jpg',

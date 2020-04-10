@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BooksCategoriesComponent } from './books-categories/books-categories.component';
 import { BookListComponent } from './book-list/book-list.component';
@@ -20,14 +20,15 @@ import {MainDashboardComponent} from './main-dashboard/main-dashboard.component'
     BookListComponent,
     ComicsDetailComponent,
     LoginComponent,
-    BooksDetailComponent
+    BooksDetailComponent,
     ComicsCategoriesComponent,
     ComicsListComponent,
     MainDashboardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

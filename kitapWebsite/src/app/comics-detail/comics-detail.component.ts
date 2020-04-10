@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Comics} from '../comics';
 import {ComicsService} from '../comics.service';
 import {ActivatedRoute} from '@angular/router';
@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./comics-detail.component.css']
 })
 export class ComicsDetailComponent implements OnInit {
-  comics: Comics;
+  @Input() comics: Comics;
   constructor(private route: ActivatedRoute, private service: ComicsService) { }
 
   ngOnInit(): void {

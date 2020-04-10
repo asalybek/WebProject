@@ -1,6 +1,10 @@
 <div class="comic_detail_page" >
+
   <div class="comic_detail_content" *ngFor="let link of comics.content" >
     <img src="{{link}}" alt="">
     <h1>{{comics.name +" " + (comics.content.indexOf(link) + 1)}}</h1>
   </div>
+  <label>Оқырман бағасы:
+    <input  [(ngModel)]="comics.rating" />
+  </label>
 </div>
