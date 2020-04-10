@@ -1,13 +1,12 @@
 <div class="comic_category_page">
-  <h1>Комикстар</h1>
-  <img src="https://image.flaticon.com/icons/svg/167/167755.svg"/>
-  <ul class = "comics-category" >
-    <li *ngFor="let comicsCategory of comicsCategoryList">
+  <div class = "comics-category" >
+    <h1>Комикстар</h1>
+    <div *ngFor="let comicsCategory of comicsCategoryList">
       <a routerLink="/comic/{{comicsCategory.name}}/all">
         <br> {{comicsCategory.name}}
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
 
   <div class="all_comics">
     <div class="each_comics" *ngFor="let comics of comicsList">

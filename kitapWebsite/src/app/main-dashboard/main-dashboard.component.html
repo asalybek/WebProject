@@ -8,19 +8,13 @@
       </div>
       <div class="footer">
       </div>
-      <h1>ҮЗДІК КОМИКСТАР</h1>
+      <h1>ҮЗДІК КОМИКСТАР & ҮЗДІК КІТАПТАР</h1>
 <div class="comics_dashboard">
-  <a *ngFor="let comics of comics" class="col-1-4">
+  <a *ngFor="let dashItems of dashItems">
     <div class="comics_items">
-      <img src="{{comics.poster}}"/>
+      <img src="{{dashItems.poster}}"/>
     </div>
   </a>
 </div>
-      <h1>ҮЗДІК КІТАПТАР</h1>
-<!--      <div class="books_dashboard">-->
-<!--        <a *ngFor="let books of books" class="col-1-4">-->
-<!--          <div class="books_items">-->
-<!--            <img src="{{books.imagesLinks}}"/>-->
-<!--          </div>-->
-<!--        </a>-->
-<!--      </div>-->
+
+
