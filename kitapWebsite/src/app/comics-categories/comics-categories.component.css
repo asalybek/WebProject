@@ -40,3 +40,11 @@
   margin: 0 20px;
   flex: 1 0 21%;
 }
+h1{
+  width: fit-content;
+  margin: 32px;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  border: 2px solid #fe793c;
+}
