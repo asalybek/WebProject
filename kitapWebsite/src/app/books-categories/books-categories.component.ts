@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {bookCategories} from '../books-categories';
+import {allBooks, bookCategories} from '../books-categories';
 
 @Component({
   selector: 'app-books-categories',
@@ -9,6 +9,7 @@ import {bookCategories} from '../books-categories';
 export class BooksCategoriesComponent implements OnInit {
 
   bookCategories = bookCategories;
+  allBooks = allBooks;
 
   constructor() { }
 
