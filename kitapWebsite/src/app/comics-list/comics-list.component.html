@@ -1,0 +1,19 @@
+<div class="comics_by_category_page">
+  <ul class = "comics-category" >
+    <h1>Комикстар</h1>
+    <li *ngFor="let comicsCategory of comicsCategoryList">
+      <a routerLink="/comic/{{comicsCategory.name}}/all">
+        <br> {{comicsCategory.name}}
+      </a>
+    </li>
+  </ul>
+
+  <div class = "all_comics" >
+    <div *ngFor="let comic of comicsProducts">
+      <a routerLink="/comic/{{comic.comic_category_name}}/all/{{comic.id}}">
+        <img class="comics-image" src="{{comic.poster}}"/>
+      </a>
+    </div>
+  </div>
+
+</div>
