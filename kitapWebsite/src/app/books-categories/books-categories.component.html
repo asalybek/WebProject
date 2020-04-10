@@ -1,19 +1,20 @@
 <div class="main">
-  <span class="books-category">
+  <div class="books-category">
     <div class="books-category-inside" *ngFor = "let bookCat of bookCategories">
-      <a routerLink="/books-categories/{{ bookCat.name }}/all">
+      <a routerLink="/books/{{ bookCat.id }}/books">
+
         {{bookCat.name}}
       </a>
     </div>
-  </span>
+  </div>
 
-  <span class="allBooks" *ngFor = "let book of books">
-    <a routerLink="/books-categories/{{book.book_category_name}}/all/{{book.id}}">
-      <div class="border">
-        <img *ngIf="book.imagesLinks" [src]="book.imagesLinks" [alt]="book.name">
-        <p class="bookName">{{book.name}}</p>
-        <p class="bookAuthor">{{book.author}}</p>
-      </div>
-    </a>
-  </span>
+
+  <div class="allBooks" >
+    <div class="border" *ngFor = "let books of allBooks">
+      <img *ngIf="books.imagesLinks" [src]="books.imagesLinks" [alt]="books.name">
+      <p class="bookName">{{books.name}}</p>
+      <p class="bookAuthor">{{books.author}}</p>
+    </div>
+  </div>
+
 </div>

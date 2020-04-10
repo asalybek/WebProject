@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: kitap-font-regular;
+}
+
+.first_div{
+  position: relative;
+}
+.first_div img{
+  width: 100%;
+}
+
+.search_box{
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 48px;
+  width: 592px;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  padding: 1px 32px 1px 12px;
+}
+input{
+  width: 100%;
+  text-align: start;
+  margin:14px;
+  border: none;
+  background: url("https://image.flaticon.com/icons/svg/149/149309.svg") no-repeat right center;
+  outline:0;
+  color:#fe793c;
+}
+input:hover {
+  border-style: none;
+}
+.comics_dashboard{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.comics_items img{
+  width: 198px;
+  height: 280px;
+  margin-left: 64px;
+}
+h1{
+  width: fit-content;
+  margin: 32px;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  border: 2px solid #fe793c;
+}
+
