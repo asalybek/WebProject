@@ -9,7 +9,7 @@ import {BooksCategoriesService} from '../books-categories.service';
   styleUrls: ['./books-detail.component.css']
 })
 export class BooksDetailComponent implements OnInit {
-  books: Book;
+  bookItem: Book;
 
   constructor(private route: ActivatedRoute, private service: BooksCategoriesService) {
   }
@@ -20,6 +20,6 @@ export class BooksDetailComponent implements OnInit {
 
   getBooks() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.service.getBooks(id).subscribe(books => this.books = books);
+    this.service.getBooks(id).subscribe(bookItem => this.bookItem = bookItem);
   }
 }

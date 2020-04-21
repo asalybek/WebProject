@@ -20,7 +20,6 @@ export class BooksCategoriesComponent implements OnInit {
 
   getBooksCategoryList(): void {
     this.service.getCategoryType()
-      // tslint:disable-next-line:no-shadowed-variable
       .subscribe(bookCategories => this.bookCategories = bookCategories);
   }
 }
