@@ -16,9 +16,9 @@ const routes: Routes = [
   { path: 'home', component: MainDashboardComponent },
   { path: 'books', component: BooksCategoriesComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'comic', component: ComicsCategoriesComponent },
-  { path: 'comic/:comic_category_name/all/:id', component: ComicsDetailComponent},
-  { path : 'comic/:comic_category_name/all', component: ComicsListComponent},
+  { path: 'comics', component: ComicsCategoriesComponent },
+  { path: 'comics/:comic_category_name/all/:id', component: ComicsDetailComponent},
+  { path : 'comics/:id/all', component: ComicsListComponent},
   { path: 'books/:book_category_name/all/:id', component: BooksDetailComponent},
   { path : 'books/:book_category_name/all', component: BookListComponent}
 ];
