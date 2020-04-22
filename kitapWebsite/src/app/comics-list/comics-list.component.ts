@@ -11,7 +11,7 @@ import {comicCategoryList} from '../comics-categories';
 })
 export class ComicsListComponent implements OnInit {
   comicsProducts: Comics[];
-  name;
+  id;
   comicsCategoryList = comicCategoryList;
 
   constructor(private route: ActivatedRoute, private service: ComicsService) { }
@@ -21,10 +21,10 @@ export class ComicsListComponent implements OnInit {
     this.getComicsByCategory();
   }
   getId(): void{
-    this.name = this.route.snapshot.paramMap.get('comic_category_name');
+    this.id = +this.route.snapshot.paramMap.get('id');
   }
   getComicsByCategory(): void{
-    this.service.getComicsByCategory(this.name)
+    this.service.getComicsByCategory(this.id)
       .subscribe(comicsProducts => this.comicsProducts = comicsProducts);
   }
 

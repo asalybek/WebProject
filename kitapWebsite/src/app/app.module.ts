@@ -9,9 +9,10 @@ import { LoginComponent } from './login/login.component';
 import { BooksDetailComponent } from './books-detail/books-detail.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { ComicsCategoriesComponent} from './comics-categories/comics-categories.component';
-import {ComicsListComponent} from './comics-list/comics-list.component';
-import {MainDashboardComponent} from './main-dashboard/main-dashboard.component';
+import { ComicsCategoriesComponent } from './comics-categories/comics-categories.component';
+import { ComicsListComponent } from './comics-list/comics-list.component';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MainDashboardComponent} from './main-dashboard/main-dashboard.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

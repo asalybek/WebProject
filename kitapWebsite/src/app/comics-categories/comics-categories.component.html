@@ -2,15 +2,15 @@
   <div class = "comics-category" >
     <h1>Комикстар</h1>
     <div *ngFor="let comicsCategory of comicsCategoryList">
-      <a routerLink="/comic/{{comicsCategory.name}}/all">
-        <br> {{comicsCategory.name}}
+      <a routerLink="/comics/{{comicsCategory.id}}/all">
+        <br> {{comicsCategory.name}}<p>Haaaaajsh</p>
       </a>
     </div>
   </div>
 
   <div class="all_comics">
     <div class="each_comics" *ngFor="let comics of comicsList">
-      <a routerLink="/comic/{{comics.comic_category_name}}/all/{{comics.id}}">
+      <a routerLink="/comics/{{comics.comic_category_name}}/all/{{comics.id}}">
         <img class="comics-image" src="{{comics.poster}}"/>
       </a>
         <input  [(ngModel)]="comics.rating" />
