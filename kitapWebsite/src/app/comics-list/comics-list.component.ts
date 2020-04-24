@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ComicsService} from '../comics.service';
-import {Comics} from '../comics';
+import {Comics, Comics1} from '../comics';
 import {comicCategoryList} from '../comics-categories';
 
 @Component({
@@ -10,7 +10,7 @@ import {comicCategoryList} from '../comics-categories';
   styleUrls: ['./comics-list.component.css']
 })
 export class ComicsListComponent implements OnInit {
-  comicsProducts: Comics[];
+  comicsProducts: Comics1[];
   id;
   comicsCategoryList = comicCategoryList;
 

@@ -140,3 +140,12 @@ id: 103,
     comic_category_name: 'Тарихи орындар'
   }
 ];
+export interface Comics1{
+  poster: string;
+  name: string;
+  content: string[];
+  id: number;
+  comic_category_id: number;
+  rating: number;
+}
+

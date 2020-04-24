@@ -10,7 +10,7 @@
 
   <div class = "all_comics" >
     <div *ngFor="let comic of comicsProducts">
-      <a routerLink="/comics/{{comic.comic_category_name}}/all/{{comic.id}}">
+      <a routerLink="/comics/{{comic.comic_category_id}}/all/{{comic.id}}">
         <img class="comics-image" src="{{comic.poster}}"/>
       </a>
     </div>
