@@ -13,10 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 from django.conf import settings
 import datetime
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -46,7 +43,6 @@ INSTALLED_APPS = [
     'rest_framework_jwt',
     'corsheaders',
 
-
     'comics',
     'book',
 ]
@@ -62,7 +58,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
-
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'kitapWebsiteBack.urls'
@@ -178,5 +173,4 @@ JWT_AUTH = {
 
     'JWT_AUTH_HEADER_PREFIX': 'JWT',
     'JWT_AUTH_COOKIE': None,
-
 }
