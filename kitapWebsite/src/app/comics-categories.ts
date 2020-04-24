@@ -1,7 +1,10 @@
 export interface ComicsCategories{
-  name: string;
   id: number;
+  name: string;
 }
+
+
+
 
 export const comicCategoryList: ComicsCategories[] = [
   {   name: 'Тарихи орындар',

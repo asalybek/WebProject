@@ -2,12 +2,12 @@
   <ul class = "comics-category" >
     <h1>Комикстар</h1>
     <li *ngFor="let comicsCategory of comicsCategoryList">
-      <a [routerLink]="'/comics/'+ comicsCategory.id + '/all'">
+      <a routerLink="/comics/{{comicsCategory.name}}/all">
         <br> {{comicsCategory.name}}
       </a>
     </li>
   </ul>
-
+<!--<app-comics-categories></app-comics-categories>-->
   <div class = "all_comics" >
     <div *ngFor="let comic of comicsProducts">
       <a routerLink="/comics/{{comic.comic_category_name}}/all/{{comic.id}}">

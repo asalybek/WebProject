@@ -17,10 +17,19 @@ export class ComicsService {
   getComics(id: number): Observable<Comics>{
     return of(comicsList.find(comics => comics.id === id));
   }
-  // getComicsByCategory(name: string): Observable<Comics[]>{
-  //   return of(comicsList.filter(comics => comics.comic_category_name === name));
-  // }
-  getComicsByCategory(id: number): Observable<Comics[]> {
-    return this.http.get<Comics[]>(`${this.BASE_URL}/comics/${id}/all`);
+  getComicsByCategory(name: string): Observable<Comics[]>{
+    return of(comicsList.filter(comics => comics.comic_category_name === name));
   }
+  // getComics(name: string, id: number): Observable<Comics>{
+  //   return this.http.get<Comics>(`${this.BASE_URL}/comics/${name}/all/${id}`);
+  // }
+  // getComicsByCategory(name: string): Observable<Comics[]>{
+  //      return this.http.get<Comics[]>(`${this.BASE_URL}/comics/${name}/all`);
+  //    }
+  // getCategoryType(): Observable<ComicsCategories[]>{
+  //   return this.http.get<ComicsCategories[]>(`${this.BASE_URL}/comics/`);
+  // }
+  // getComicsByCategory(id: number): Observable<Comics[]> {
+  //   return this.http.get<Comics[]>(`${this.BASE_URL}/comics/${id}/all`);
+  // }
 }
