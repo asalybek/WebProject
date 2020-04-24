@@ -2,8 +2,8 @@
   <div class = "comics-category" >
     <h1>Комикстар</h1>
     <div *ngFor="let comicsCategory of comicsCategoryList">
-      <a routerLink="/comics/{{comicsCategory.id}}/all">
-        <br> {{comicsCategory.name}}<p>Haaaaajsh</p>
+      <a routerLink="/comics/{{comicsCategory.name}}/all">
+        <br> {{comicsCategory.name}}
       </a>
     </div>
   </div>
@@ -16,4 +16,6 @@
         <input  [(ngModel)]="comics.rating" />
     </div>
   </div>
+<!--  <app-comics-list></app-comics-list>-->
 </div>
+

@@ -11,7 +11,6 @@ import {ActivatedRoute} from '@angular/router';
 export class ComicsDetailComponent implements OnInit {
   @Input() comics: Comics;
   constructor(private route: ActivatedRoute, private service: ComicsService) { }
-
   ngOnInit(): void {
     this.getComics();
   }
@@ -19,4 +18,9 @@ export class ComicsDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.service.getComics(id).subscribe(comics => this.comics = comics);
   }
+  // getComics(){
+  //   const id = +this.route.snapshot.paramMap.get('id');
+  //   const name = this.route.snapshot.paramMap.get('comic_category_name');
+  //   this.service.getComics(name, id).subscribe(comics => this.comics = comics);
+  // }
 }

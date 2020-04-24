@@ -14,4 +14,3 @@ class ComicsCategoryListAPIView(generics.ListAPIView):
 class ComicsDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Comics.objects.all()
     serializer_class = ComicsSerializer2
-
