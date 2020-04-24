@@ -14,6 +14,7 @@ import { ComicsListComponent } from './comics-list/comics-list.component';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

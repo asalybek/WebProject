@@ -14,13 +14,13 @@ export class ComicsDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getComics();
   }
-  getComics(){
-    const id = +this.route.snapshot.paramMap.get('id');
-    this.service.getComics(id).subscribe(comics => this.comics = comics);
-  }
   // getComics(){
   //   const id = +this.route.snapshot.paramMap.get('id');
-  //   const name = this.route.snapshot.paramMap.get('comic_category_name');
-  //   this.service.getComics(name, id).subscribe(comics => this.comics = comics);
+  //   this.service.getComics(id).subscribe(comics => this.comics = comics);
   // }
+  getComics(){
+    const id = +this.route.snapshot.paramMap.get('id');
+    const name = this.route.snapshot.paramMap.get('comic_category_name');
+    this.service.getComics(name, id).subscribe(comics => this.comics = comics);
+  }
 }
