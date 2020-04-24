@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ComicsCategories} from '../comics-categories';
 import { ComicsService} from '../comics.service';
-import { comicsList } from '../comics';
+import {Comics, comicsList} from '../comics';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-comics-categories',
@@ -10,8 +11,9 @@ import { comicsList } from '../comics';
 })
 export class ComicsCategoriesComponent implements OnInit {
   comicsCategoryList: ComicsCategories[];
+  name;
   comicsList = comicsList;
-  constructor(private service: ComicsService) { }
+  constructor(private route: ActivatedRoute, private service: ComicsService) { }
 
   ngOnInit(): void {
     this.getComicsCategoryList();

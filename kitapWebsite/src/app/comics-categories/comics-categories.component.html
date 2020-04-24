@@ -2,7 +2,7 @@
   <div class = "comics-category" >
     <h1>Комикстар</h1>
     <div *ngFor="let comicsCategory of comicsCategoryList">
-      <a routerLink="/comics/{{comicsCategory.id}}/all">
+      <a routerLink="/comics/{{comicsCategory.name}}/all">
         <br> {{comicsCategory.name}}
       </a>
     </div>
@@ -10,10 +10,12 @@
 
   <div class="all_comics">
     <div class="each_comics" *ngFor="let comics of comicsList">
-      <a routerLink="/comics/{{comics.comic_category_id}}/all/{{comics.id}}">
+      <a routerLink="/comics/{{comics.comic_category_name}}/all/{{comics.id}}">
         <img class="comics-image" src="{{comics.poster}}"/>
       </a>
         <input  [(ngModel)]="comics.rating" />
     </div>
   </div>
+<!--  <app-comics-list></app-comics-list>-->
 </div>
+

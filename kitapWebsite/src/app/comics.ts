@@ -1,10 +1,10 @@
 export interface Comics{
+  id: number;
   poster: string;
   name: string;
-  content: string[];
-  id: number;
   comic_category_name: string;
   rating: number;
+  content: string[];
 }
 
 export const comicsList: Comics[] = [
