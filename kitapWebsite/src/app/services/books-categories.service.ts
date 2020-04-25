@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import {bookCategories, Category} from './books-categories';
+import {bookCategories, Category} from '../models/books-categories';
 import {Observable, of} from 'rxjs';
-import {Book, books} from './books';
-import {Comics, comicsList} from './comics';
-import {DashboardItems, dashList} from './dashboard-items';
+import {Book, books} from '../models/books';
+import {DashboardItems, dashList} from '../models/dashboard-items';
 
 @Injectable({
   providedIn: 'root'

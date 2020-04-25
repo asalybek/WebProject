@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {ComicsService} from '../comics.service';
-import {Comics} from '../comics';
-import {BooksCategoriesService} from '../books-categories.service';
-import {Book} from '../books';
-import {DashboardItems} from '../dashboard-items';
+import {ComicsService} from '../services/comics.service';
+import {Comics} from '../models/comics';
+import {BooksCategoriesService} from '../services/books-categories.service';
+import {Book} from '../models/books';
+import {DashboardItems} from '../models/dashboard-items';
 
 @Component({
   selector: 'app-main-dashboard',

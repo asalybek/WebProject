@@ -1,10 +1,37 @@
 <div class="comic_detail_page" >
 
-  <div class="comic_detail_content" *ngFor="let link of comics.content" >
-    <img src="{{link}}" alt="">
-    <h1>{{comics.name +" " + (comics.content.indexOf(link) + 1)}}</h1>
+  <div class="comic_detail_content" *ngIf="comics.content"  >
+
+    <img src="{{comics.content.img1}}" alt=" bad guy">
+     <h1>1</h1>
+
+    <img src="{{comics.content.img2}}">
+      <h1>2</h1>
+
+
+    <img src="{{comics.content.img3}}" >
+
+
+    <img src="{{comics.content.img4}}" >
+<!--    <p>{{comics.name +" " + (4)}}</p>-->
+    <img src="{{comics.content.img5}}" >
+<!--    <p>{{comics.name +" " + (5)}}</p>-->
+    <img src="{{comics.content.img6}}" >
+    <img src="{{comics.content.img7}}" >
+    <img src="{{comics.content.img8}}" >
+    <img src="{{comics.content.img9}}" >
+    <img src="{{comics.content.img10}}" >
+    <img src="{{comics.content.img11}}" >
+    <img src="{{comics.content.img12}}" >
+    <img src="{{comics.content.img13}}" >
+    <img src="{{comics.content.img14}}" >
+    <img src="{{comics.content.img15}}" >
+    <img src="{{comics.content.img16}}" >
+    <img src="{{comics.content.img17}}" >
+    <img src="{{comics.content.img18}}" >
   </div>
-  <label>Оқырман бағасы:
-    <input  [(ngModel)]="comics.rating" />
-  </label>
+
 </div>
+<label>Оқырман бағасы:
+  <input  [(ngModel)]="comics.rating" />
+</label>

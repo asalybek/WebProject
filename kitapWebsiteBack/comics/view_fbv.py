@@ -5,9 +5,9 @@ from rest_framework.response import Response
 
 from .serializers import ComicsSerializer2
 @api_view(['GET'])
-def category_comics(request, category_name):
+def category_comics(request, category_id):
     try:
-        comics_category = ComicsCategory.objects.get(name=category_name)
+        comics_category = ComicsCategory.objects.get(id=category_id)
     except ComicsCategory.DoesNotExist as e:
         return Response({'error': str(e)})
     if request.method == 'GET':

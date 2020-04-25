@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Comics} from '../comics';
-import {ComicsService} from '../comics.service';
+import { Comics} from '../models/comics';
+import {ComicsService} from '../services/comics.service';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
@@ -9,6 +9,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./comics-detail.component.css']
 })
 export class ComicsDetailComponent implements OnInit {
+  cnt = 0;
   @Input() comics: Comics;
   constructor(private route: ActivatedRoute, private service: ComicsService) { }
   ngOnInit(): void {
@@ -20,7 +21,7 @@ export class ComicsDetailComponent implements OnInit {
   // }
   getComics(){
     const id = +this.route.snapshot.paramMap.get('id');
-    const name = this.route.snapshot.paramMap.get('comic_category_name');
-    this.service.getComics(name, id).subscribe(comics => this.comics = comics);
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    this.service.getComics(categoryId, id).subscribe(comics => this.comics = comics);
   }
 }

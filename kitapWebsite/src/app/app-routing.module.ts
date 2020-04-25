@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: 'books', component: BooksCategoriesComponent },
   { path: 'login', component: LoginComponent },
   { path: 'comics', component: ComicsCategoriesComponent },
-  { path: 'comics/:comic_category_name/all/:id', component: ComicsDetailComponent},
-  { path : 'comics/:comic_category_name/all', component: ComicsListComponent},
+  { path: 'comics/:category_id/all/:id', component: ComicsDetailComponent},
+  { path : 'comics/:category_id/all', component: ComicsListComponent},
   { path: 'books/:book_category_name/all/:id', component: BooksDetailComponent},
   { path : 'books/:book_category_name/all', component: BookListComponent}
 ];

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {comicCategoryList, ComicsCategories} from './comics-categories';
+import {comicCategoryList, ComicsCategories} from '../models/comics-categories';
 import {Observable, of} from 'rxjs';
-import {Comics, comicsList} from './comics';
+import {Comics} from '../models/comics';
 import { HttpClient} from '@angular/common/http';
 
 @Injectable({
@@ -20,17 +20,20 @@ export class ComicsService {
   // getComicsByCategory(name: string): Observable<Comics[]>{
   //   return of(comicsList.filter(comics => comics.comic_category_name === name));
   // }
-  getComics(name: string, id: number): Observable<Comics>{
-    return this.http.get<Comics>(`${this.BASE_URL}/comics/${name}/all/${id}`);
+
+  getComics(categoryId: number, id: number): Observable<Comics>{
+    return this.http.get<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}`);
   }
-  getComicsByCategory(name: string): Observable<Comics[]>{
-       return this.http.get<Comics[]>(`${this.BASE_URL}/comics/${name}/all`);
-     }
+  getComicsByCategory(id: number): Observable<Comics[]>{
+       return this.http.get<Comics[]>(`${this.BASE_URL}/comics/${id}/all`);
+  }
   getCategoryType(): Observable<ComicsCategories[]>{
     return this.http.get<ComicsCategories[]>(`${this.BASE_URL}/comics/`);
-    console.log('Http');
   }
   // getComicsByCategory(id: number): Observable<Comics[]> {
   //   return this.http.get<Comics[]>(`${this.BASE_URL}/comics/${id}/all`);
   // }
+  getComicsList(): Observable<Comics[]>{
+    return this.http.get<Comics[]>(`${this.BASE_URL}/comics/all`);
+  }
 }

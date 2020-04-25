@@ -11,12 +11,19 @@ body { font-family: sans-serif; }
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-
+  align-items: center;
 }
 .comic_detail_content {
+  width: fit-content;
   flex:1 0 21%;
-  margin-left: 100px;
+  /*margin-left: 100px;*/
+  /*margin-right: 100px;*/
   border: 5px solid black;
+}
+.comic_detail_content img{
+  width: 756px;
+  height: 920px;
+  margin: 0 20px;
 }
 h1{
   width: fit-content;

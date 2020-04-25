@@ -1,37 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import {DashboardService} from '../dashboard.service';
+import {Component} from '@angular/core';
+import {DashboardService} from '../services/dashboard.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-  public logged = false;
-
-  email = '';
+export class LoginComponent {
+  username = '';
   password = '';
-  constructor(private service: DashboardService) { }
+  constructor(private service: DashboardService, private location: Location) { }
 
-  ngOnInit(): void {
-    const token = localStorage.getItem('token');
-    if (token) {
-      this.logged = true;
-    }
-  }
   login() {
-    this.service.login(this.email, this.password)
+    this.service.login(this.username, this.password)
       .subscribe(res => {
         localStorage.setItem('token', res.token);
-        this.logged = true;
-
-        this.email = '';
+        console.log('LOGIN', this.service.logged);
+        this.service.logged = true;
+        console.log('LOGIN', this.service.logged);
+        this.username = '';
         this.password = '';
       });
   }
 
-  logout() {
-    localStorage.clear();
-    this.logged = false;
-  }
 }
