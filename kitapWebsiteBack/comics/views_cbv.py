@@ -17,7 +17,7 @@ class ComicsDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ComicsSerializer2
 
 
-class ComicsListAPIView(generics.ListAPIView):
+class ComicsListAPIView(generics.ListCreateAPIView):
     queryset = Comics.objects.all()
     serializer_class = ComicsSerializer2
     filter_backends = (DjangoFilterBackend,)

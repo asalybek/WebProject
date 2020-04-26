@@ -31,9 +31,19 @@ export class ComicsService {
     return this.http.get<ComicsCategories[]>(`${this.BASE_URL}/comics/`);
   }
   getComicsList(): Observable<Comics[]>{
-    return this.http.get<Comics[]>(`${this.BASE_URL}/comics/all`);
+    return this.http.get<Comics[]>(`${this.BASE_URL}/comics/all/`);
   }
   setRating(rating: number, categoryId: number, id: number): Observable<Comics>{
     return this.http.put<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}`, {rating});
+  }
+  addComics(): Observable<Comics[]>{
+    return this.http.post<Comics[]>(`${this.BASE_URL}/comics/all/`, {
+      name: 'Test Comics',
+      poster: 'https://lh3.googleusercontent.com/-UvDy55qMXvE/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck0sSU4EY2_EktQWnW0kH3cVMTtaw.CMID/s48-c/photo.jpg',
+      rating: 1,
+    });
+  }
+  removeComics(categoryId: number, id: number): Observable<Comics>{
+    return this.http.delete<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}`);
   }
 }

@@ -14,10 +14,6 @@ export class ComicsDetailComponent implements OnInit {
   ngOnInit(): void {
     this.getComics();
   }
-  // getComics(){
-  //   const id = +this.route.snapshot.paramMap.get('id');
-  //   this.service.getComics(id).subscribe(comics => this.comics = comics);
-  // }
   getComics(){
     const id = +this.route.snapshot.paramMap.get('id');
     const categoryId = +this.route.snapshot.paramMap.get('category_id');
@@ -28,5 +24,10 @@ export class ComicsDetailComponent implements OnInit {
     const categoryId = +this.route.snapshot.paramMap.get('category_id');
     console.log(this.comics.rating);
     this.service.setRating(this.comics.rating, categoryId, id).subscribe(comics => this.comics = comics);
+  }
+  removeComics(){
+    const id = +this.route.snapshot.paramMap.get('id');
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    this.service.removeComics(categoryId, id).subscribe(comics => this.comics = comics);
   }
 }
