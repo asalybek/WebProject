@@ -1,5 +1,80 @@
 <div class="comic_detail_page" >
-  <div class="comic_detail_content" *ngFor="let link of comics.content" >
-    <img src="{{link}}" alt="">
+
+  <div class="comic_detail_content" *ngIf="comics.content" >
+    <div class="content">
+      <img src="{{comics.content.img1}}" alt=" bad guy">
+     <h1>1</h1>
+    </div>
+    <div class="content">
+     <img src="{{comics.content.img2}}">
+      <h1>2</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img3}}" >
+      <h1>3</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img4}}" >
+      <h1>4</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img5}}" >
+      <h1>5</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img6}}" >
+      <h1>6</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img7}}" >
+      <h1>7</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img8}}" >
+      <h1>8</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img9}}" >
+      <h1>9</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img10}}" >
+      <h1>10</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img11}}" >
+      <h1>11</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img12}}" >
+      <h1>12</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img13}}" >
+      <h1>13</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img14}}" >
+      <h1>14</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img15}}" >
+      <h1>15</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img16}}" >
+      <h1>16</h1>
+    </div>
+    <div class="content">
+      <img src="{{comics.content.img17}}" >
+      <h1>17</h1>
+    </div>
   </div>
+
+
+<label>Оқырман бағасы:
+  <input  [(ngModel)]="comics.rating" />
+</label>
+<button class="rating" (click)="setRating()">Сақтау</button> <br>
+<button class="remove" (click)="removeComics()">Жою</button> <br>
 </div>

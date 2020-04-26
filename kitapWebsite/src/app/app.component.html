@@ -4,19 +4,22 @@
   </head>
   <body>
     <header>
+
       <div class="nav_bar">
         <img class="logo" routerLink="/home" src="https://kitap.kz/images/logo/orange-logo.svg" alt="logo">
         <nav>
-          <ul class="nav_links">
+          <ul class="nav_links" >
             <li><a routerLink="/books">Кітап</a></li>
-            <li><a routerLink="/comic">Комикс</a></li>
+            <li><a routerLink="/comics">Комикс</a></li>
           </ul>
         </nav>
-        <a class="login" routerLink="/login"><button>Кіру</button></a>
+<!--        <a class="login" routerLink="/login"><button *ngIf="!logged">Кіру</button></a>-->
+        <button *ngIf="!logged" [routerLink]="['/login']" class="login" type="button">Кіру</button>
+        <a class="login" ><button *ngIf="logged" [routerLink]="['/home']"(click)="logout()">Шығу</button></a>
       </div>
     </header>
-
     <router-outlet></router-outlet>
+
     <footer class="footer-distributed">
 
       <div class="footer-left">

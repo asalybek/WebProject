@@ -39,12 +39,15 @@ input:hover {
 .comics_dashboard{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .comics_items img{
   width: 198px;
   height: 280px;
-  margin-left: 64px;
+  margin-left: 72px;
+  margin-bottom: 12px;
+  flex: 1 0 21%;
 }
 h1{
   width: fit-content;

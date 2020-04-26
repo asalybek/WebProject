@@ -6,9 +6,9 @@
         <h1>Кіру</h1>
       <form class="login_form">
         <label for="email">E-mail</label>
-        <input id="email" type="text" placeholder="example@example.com">
-        <label for="password">Құпиясөз</label>
-        <input id="password" type="password" placeholder="6 символдан көп теріңіз">
+        <input id="email" type="text" [(ngModel)]="username" placeholder="example@example.com" [ngModelOptions]="{standalone: true}" >
+        <label for="password" >Құпиясөз</label>
+        <input id="password" type="password" [(ngModel)]="password" placeholder="6 символдан көп теріңіз" [ngModelOptions]="{standalone: true}">
       </form>
 
       <div class="after_login">
@@ -16,7 +16,7 @@
         <a href="">Құпия сөзді ұмыттыңыз ба?</a>
       </div>
 
-      <a class="login" href="#"><button>Кіру</button></a>
+      <a class="login" href="#"><button (click)="login()">Кіру</button></a>
       <p>Әлеуметтік желілер арқылы кіру</p>
       <div class="login_with">
         <a href="#"><button class="google" >G</button></a>

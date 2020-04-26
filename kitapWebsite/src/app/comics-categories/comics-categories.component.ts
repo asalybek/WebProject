@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ComicsCategories} from '../comics-categories';
-import { ComicsService} from '../comics.service';
-import { comicsList } from '../comics';
+import { ComicsCategories} from '../models/comics-categories';
+import { ComicsService} from '../services/comics.service';
+import {ActivatedRoute} from '@angular/router';
+import {Comics} from '../models/comics';
 
 @Component({
   selector: 'app-comics-categories',
@@ -10,14 +11,25 @@ import { comicsList } from '../comics';
 })
 export class ComicsCategoriesComponent implements OnInit {
   comicsCategoryList: ComicsCategories[];
-  comicsList = comicsList;
-  constructor(private service: ComicsService) { }
+  name;
+  comicsList: Comics[];
+  constructor(private route: ActivatedRoute, private service: ComicsService) { }
 
   ngOnInit(): void {
+    this.getComics();
     this.getComicsCategoryList();
   }
   getComicsCategoryList(): void{
     this.service.getCategoryType()
       .subscribe(comicsCategoryList => this.comicsCategoryList = comicsCategoryList);
+  }
+
+  getComics(): void{
+    this.service.getComicsList()
+      .subscribe(comicsProducts => this.comicsList = comicsProducts);
+  }
+  addComics(): void{
+    this.service.addComics()
+      .subscribe(comicsList => this.comicsList = comicsList);
   }
 }

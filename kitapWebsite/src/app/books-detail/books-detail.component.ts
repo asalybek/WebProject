@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Book} from '../books';
+import {Book} from '../models/books';
 import {ActivatedRoute} from '@angular/router';
-import {BooksCategoriesService} from '../books-categories.service';
+import {BooksCategoriesService} from '../services/books-categories.service';
 
 @Component({
   selector: 'app-books-detail',
@@ -9,8 +9,7 @@ import {BooksCategoriesService} from '../books-categories.service';
   styleUrls: ['./books-detail.component.css']
 })
 export class BooksDetailComponent implements OnInit {
-
-  books: Book;
+  bookItem: Book;
 
   constructor(private route: ActivatedRoute, private service: BooksCategoriesService) {
   }
@@ -21,6 +20,6 @@ export class BooksDetailComponent implements OnInit {
 
   getBooks() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.service.getBooks(id).subscribe(books => this.books = books);
+    this.service.getBooks(id).subscribe(bookItem => this.bookItem = bookItem);
   }
 }

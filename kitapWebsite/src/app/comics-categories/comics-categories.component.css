@@ -40,3 +40,36 @@
   margin: 0 20px;
   flex: 1 0 21%;
 }
+h1{
+  width: fit-content;
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  border: 2px solid #fe793c;
+}
+input{
+  width: 40px;
+  text-align: center;
+  margin:14px;
+  border: 6px dotted black;
+  color:#fe793c;
+  font-weight: bold;
+  font-size: 16px;
+}
+button {
+  width: fit-content;
+  font-family: kitap-font-regular;
+  background-color: #FFF;
+  border: none;
+  border-radius: 2px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: sandybrown;
+}
+button:hover{
+  background-color: sandybrown;
+  color: #FFFFFF;
+  border-color:#fe793c ;
+}
