@@ -22,19 +22,19 @@ export class ComicsService {
   // }
 
   getComics(categoryId: number, id: number): Observable<Comics>{
-    return this.http.get<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}`);
+    return this.http.get<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}/`);
   }
   getComicsByCategory(id: number): Observable<Comics[]>{
-       return this.http.get<Comics[]>(`${this.BASE_URL}/comics/${id}/all`);
+       return this.http.get<Comics[]>(`${this.BASE_URL}/comics/${id}/all/`);
   }
   getCategoryType(): Observable<ComicsCategories[]>{
-    return this.http.get<ComicsCategories[]>(`${this.BASE_URL}/comics/`);
+    return this.http.get<ComicsCategories[]>(`${this.BASE_URL}/comics/categories/`);
   }
   getComicsList(): Observable<Comics[]>{
     return this.http.get<Comics[]>(`${this.BASE_URL}/comics/all/`);
   }
   setRating(rating: number, categoryId: number, id: number): Observable<Comics>{
-    return this.http.put<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}`, {rating});
+    return this.http.put<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}/`, {rating});
   }
   addComics(): Observable<Comics[]>{
     return this.http.post<Comics[]>(`${this.BASE_URL}/comics/all/`, {
@@ -44,6 +44,6 @@ export class ComicsService {
     });
   }
   removeComics(categoryId: number, id: number): Observable<Comics>{
-    return this.http.delete<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}`);
+    return this.http.delete<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}/`);
   }
 }
