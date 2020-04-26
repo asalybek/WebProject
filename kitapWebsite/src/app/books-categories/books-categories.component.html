@@ -1,18 +1,22 @@
 <div class="main">
   <div class="books-category">
-    <div class="books-category-inside" *ngFor = "let bookCat of bookCategories">
-      <a routerLink="/books/{{ bookCat.name }}/all">
+    <div class="books-category-inside" *ngFor = "let bookCat of booksCategories">
+      <a routerLink="/books/{{ bookCat.id }}/all">
         {{bookCat.name}}
       </a>
     </div>
+    <br><button (click)="addBooks()">Кітап+</button>
   </div>
 
 
   <div class="allBooks" >
-    <div class="border" *ngFor = "let books of allBooks">
-      <img *ngIf="books.imagesLinks" [src]="books.imagesLinks" [alt]="books.name">
-      <p class="bookName">{{books.name}}</p>
-      <p class="bookAuthor">{{books.author}}</p>
+    <div class="border" *ngFor = "let books of booksList">
+      <a routerLink="/books/{{books.category_id}}/all/{{books.id}}">
+        <img src="{{books.image}}"/>
+        <p class="bookName">{{books.name}}</p>
+        <p class="bookAuthor">{{books.author}}</p>
+      </a>
+      <input  [(ngModel)]="books.rating" />
     </div>
   </div>
 

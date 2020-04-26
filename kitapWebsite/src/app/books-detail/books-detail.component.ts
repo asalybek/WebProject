@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Book} from '../models/books';
 import {ActivatedRoute} from '@angular/router';
 import {BooksCategoriesService} from '../services/books-categories.service';
@@ -9,7 +9,7 @@ import {BooksCategoriesService} from '../services/books-categories.service';
   styleUrls: ['./books-detail.component.css']
 })
 export class BooksDetailComponent implements OnInit {
-  bookItem: Book;
+  @Input() bookItem: Book;
 
   constructor(private route: ActivatedRoute, private service: BooksCategoriesService) {
   }
@@ -18,8 +18,20 @@ export class BooksDetailComponent implements OnInit {
     this.getBooks();
   }
 
-  getBooks() {
+  getBooks(){
     const id = +this.route.snapshot.paramMap.get('id');
-    this.service.getBooks(id).subscribe(bookItem => this.bookItem = bookItem);
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    this.service.getBooks(categoryId, id).subscribe(bookItem => this.bookItem = bookItem);
+  }
+  setRating(){
+    const id = +this.route.snapshot.paramMap.get('id');
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    console.log(this.bookItem.rating);
+    this.service.setRating(this.bookItem.rating, categoryId, id).subscribe(bookItem => this.bookItem = bookItem);
+  }
+  removeBooks(){
+    const id = +this.route.snapshot.paramMap.get('id');
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    this.service.removeBooks(categoryId, id).subscribe(bookItem => this.bookItem = bookItem);
   }
 }
