@@ -27,26 +27,35 @@ class ComicsSerializer2(serializers.ModelSerializer):
 
 
 class ComicsCategorySerializer(serializers.Serializer):
+    def update(self, instance, validated_data):
+        pass
+
+    def create(self, validated_data):
+        pass
+
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField()
+
 
 class ComicsSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField()
     poster = serializers.CharField()
     rating = serializers.FloatField()
-    # address = serializers.CharField()
-    #
-    # def create(self, validated_data):
-    #     company = Company.objects.create(name=validated_data.get('name'), description=validated_data('description',
-    #                                     city=validated_data.get('city'), address=validated_data.get('address')))
-    #     return company
-    #
-    # def update(self, instance, validated_data):
-    #     instance.name = validated_data.get('name', instance.name)
-    #     instance.description = validated_data.get('description', instance.description)
-    #     instance.city = validated_data.get('address', instance.city)
-    #     instance.address = validated_data.get('address', instance.address)
-    #     instance.save()
-    #     return instance
+    content_id = serializers.IntegerField()
+    category_id = serializers.IntegerField()
 
+    def create(self, validated_data):
+        comics = Comics.objects.create(name=validated_data.get('name'), poster=validated_data('poster',
+                                        rating=validated_data.get('rating'), content_id=validated_data.get('content_id')),
+                                       category_id=validated_data.get('category_id'))
+        return comics
+
+    def update(self, instance, validated_data):
+        instance.name = validated_data.get('name', instance.name)
+        instance.poster = validated_data.get('poster', instance.poster)
+        instance.rating = validated_data.get('rating', instance.rating)
+        instance.content_id = validated_data.get('content_id', instance.content_id)
+        instance.category_id = validated_data.get('category_id', instance.category_id)
+        instance.save()
+        return instance
