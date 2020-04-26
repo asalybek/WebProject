@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import {Book} from '../models/books';
-import {BooksCategoriesService} from '../services/books-categories.service';
-import {ActivatedRoute} from '@angular/router';
-=======
 import {ActivatedRoute} from '@angular/router';
 import { Book } from '../models/books';
 import { BooksCategoriesService } from '../services/books-categories.service';
->>>>>>> origin/master
 import { bookCategories } from '../models/books-categories';
 
 @Component({

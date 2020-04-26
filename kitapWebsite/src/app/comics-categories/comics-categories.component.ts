@@ -28,4 +28,8 @@ export class ComicsCategoriesComponent implements OnInit {
     this.service.getComicsList()
       .subscribe(comicsProducts => this.comicsList = comicsProducts);
   }
+  addComics(): void{
+    this.service.addComics()
+      .subscribe(comicsList => this.comicsList = comicsList);
+  }
 }

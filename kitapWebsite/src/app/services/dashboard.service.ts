@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {LoginResponse} from '../models/loginResponse';
+import {Comics} from '../models/comics';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,8 @@ export class DashboardService {
       username,
       password
     });
+  }
+  getTopSixComics(): Observable<Comics[]>{
+    return this.httpClient.get<Comics[]>(`${this.BASE_URL}/comics/top-six/`);
   }
 }

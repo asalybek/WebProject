@@ -46,7 +46,4 @@ export class ComicsService {
   removeComics(categoryId: number, id: number): Observable<Comics>{
     return this.http.delete<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}`);
   }
-  setRating(rating: number, categoryId: number, id: number): Observable<Comics>{
-    return this.http.put<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}`, {rating});
-  }
 }
