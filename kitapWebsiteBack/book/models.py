@@ -13,6 +13,6 @@ class BooksCategory(models.Model):
 class Book(models.Model):
     name = models.CharField(max_length=300)
     author = models.TextField(max_length=300)
-    image = models.CharField(max_length=300)
+    image = models.TextField(default='')
     rating = models.FloatField(default=5)
     category = models.ForeignKey(BooksCategory, on_delete=models.CASCADE)
