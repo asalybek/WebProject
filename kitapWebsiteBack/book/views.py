@@ -1,10 +1,10 @@
-from rest_framework import status
+from rest_framework import status, generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from books.models import BooksCategory, Book
-from books.serializers import BooksCategorySerializer, BookSerializer, BookSerializer2
+from book.models import BooksCategory, Book
+from book.serializers import BooksCategorySerializer, BookSerializer, BookSerializer2
 
 
 @api_view(["GET"])

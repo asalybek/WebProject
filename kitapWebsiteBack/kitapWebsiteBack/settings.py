@@ -43,10 +43,11 @@ INSTALLED_APPS = [
     'rest_framework_jwt',
     'corsheaders',
     'django_filters',
-
-    'comics',
     'book',
+    'comics',
+
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -165,7 +166,7 @@ JWT_AUTH = {
     'JWT_VERIFY': True,
     'JWT_VERIFY_EXPIRATION': True,
     'JWT_LEEWAY': 0,
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=60),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(minutes=15),
     'JWT_AUDIENCE': None,
     'JWT_ISSUER': None,
 
