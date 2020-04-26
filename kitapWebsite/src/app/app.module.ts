@@ -12,8 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComicsCategoriesComponent } from './comics-categories/comics-categories.component';
 import { ComicsListComponent } from './comics-list/comics-list.component';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
-import { HttpClientModule } from '@angular/common/http';
-
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import {AuthInterceptor} from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,11 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
