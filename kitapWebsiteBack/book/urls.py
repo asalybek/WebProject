@@ -3,7 +3,7 @@ from book.views import *
 
 urlpatterns = [
     path('categories/', BooksCategoryListAPIView.as_view()),
-    path('categories/<int:category_id>/books/', category_books),
-    path('books/', BookListAPIView.as_view()),
-    path('books/<int:book_id>/', BookDetailAPIView.as_view())
+    path('<int:category_id>/all/', category_books),
+    path('all/', BookListAPIView.as_view()),
+    path('<int:category_id>/all/<int:book_id>', BookDetailAPIView.as_view())
 ]
