@@ -62,7 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
@@ -104,7 +104,7 @@
       <workItem from="1587839147922" duration="950000" />
       <workItem from="1587840517977" duration="2299000" />
       <workItem from="1587874552769" duration="766000" />
-      <workItem from="1587894090848" duration="2780000" />
+      <workItem from="1587894090848" duration="3281000" />
     </task>
     <servers />
   </component>
@@ -116,18 +116,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="274" y="7" width="1092" height="721" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1587840962083" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587875438667">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587907378143">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587875438667" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587907378143" />
     <state x="395" y="80" key="MultipleFileMergeDialog" timestamp="1587895074595">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="395" y="80" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1587895074595" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1587841200292">
+    <state x="184" y="6" key="SettingsEditor" timestamp="1587907440976">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587841200292" />
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587907440976" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1587874579096">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,7 +1,12 @@
 <div class="book_detail_page" >
     <div class="border">
-      <img src="{{bookItem.imagesLinks}}" [alt]="bookItem.name">
+      <img src="{{bookItem.image}}" [alt]="bookItem.name">
       <p class="bookName">{{bookItem.name}}</p>
       <p class="bookAuthor">{{bookItem.author}}</p>
     </div>
+  <label>Оқырман бағасы:
+    <input  [(ngModel)]="bookItem.rating" />
+  </label>
+  <button class="rating" (click)="setRating()">Сақтау</button> <br>
+  <button class="remove" (click)="removeBooks()">Жою</button> <br>
 </div>
