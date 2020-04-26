@@ -8,15 +8,15 @@ class BooksCategorySerializer(serializers.ModelSerializer):
         fields = ('id', 'name')
 
 
-class BookSerializer2(serializers.ModelSerializer):
-    category_id = serializers.IntegerField(write_only=True)
+class BookSerializer(serializers.ModelSerializer):
+    category = BooksCategorySerializer(read_only=True)
 
     class Meta:
         model = Book
-        fields = ('id', 'name', 'author', 'image', 'rating', 'category_id')
+        fields = ('id', 'name', 'author', 'image', 'rating', 'category', 'category_id')
 
 
-class BookSerializer(serializers.Serializer):
+class BookSerializer2(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     name = serializers.CharField(max_length=300)
     author = serializers.CharField(max_length=300)
