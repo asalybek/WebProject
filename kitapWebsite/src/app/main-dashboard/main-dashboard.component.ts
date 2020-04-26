@@ -4,6 +4,7 @@ import {Comics} from '../models/comics';
 import {BooksCategoriesService} from '../services/books-categories.service';
 import {Book} from '../models/books';
 import {DashboardItems} from '../models/dashboard-items';
+import {DashboardService} from '../services/dashboard.service';
 
 @Component({
   selector: 'app-main-dashboard',
@@ -12,14 +13,14 @@ import {DashboardItems} from '../models/dashboard-items';
 })
 export class MainDashboardComponent implements OnInit {
 
-  dashItems: DashboardItems[] = [];
-  constructor(private booksService: BooksCategoriesService) { }
+  topComics: Comics[];
+  constructor(private service: DashboardService) { }
 
   ngOnInit(): void {
-    this.getAll();
+    this.getComics();
   }
-  getAll(): void {
-    this.booksService.getAllItems()
-      .subscribe(dashItems => this.dashItems = dashItems.slice(0, 14));
+  getComics(): void {
+    this.service.getTopSixComics()
+      .subscribe(dashItems => this.topComics = dashItems);
   }
 }

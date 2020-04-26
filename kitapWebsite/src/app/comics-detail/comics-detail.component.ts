@@ -29,4 +29,9 @@ export class ComicsDetailComponent implements OnInit {
     console.log(this.comics.rating);
     this.service.setRating(this.comics.rating, categoryId, id).subscribe(comics => this.comics = comics);
   }
+  removeComics(){
+    const id = +this.route.snapshot.paramMap.get('id');
+    const categoryId = +this.route.snapshot.paramMap.get('category_id');
+    this.service.removeComics(categoryId, id).subscribe(comics => this.comics = comics);
+  }
 }

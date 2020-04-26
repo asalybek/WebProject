@@ -8,22 +8,24 @@ body { font-family: sans-serif; }
 
 .comic_detail_page{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
 .comic_detail_content {
-  width: fit-content;
-  flex:1 0 21%;
-  /*margin-left: 100px;*/
-  /*margin-right: 100px;*/
+  justify-content: space-evenly;
   border: 5px solid black;
 }
 .comic_detail_content img{
   width: 756px;
   height: 920px;
   margin: 0 20px;
+}
+.content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 h1{
   width: fit-content;
@@ -43,4 +45,29 @@ input{
 }
 label{
   font-size: 18px;
+}
+button {
+  width: fit-content;
+  font-family: kitap-font-regular;
+  background-color: #FFF;
+  padding: 8px;
+  border-radius: 2px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+button:hover{
+  background-color: tomato;
+  color: #FFFFFF;
+}
+.rating{
+  border: red solid 1px;
+  color: black;
+}
+.remove{
+  background-color: rgba(255, 99, 71, 0.49);
+  width: 100%;
+  border: none;
 }

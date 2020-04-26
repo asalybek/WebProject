@@ -10,9 +10,9 @@
       </div>
       <h1>ҮЗДІК КОМИКСТАР & ҮЗДІК КІТАПТАР</h1>
 <div class="comics_dashboard">
-  <a *ngFor="let dashItems of dashItems">
+  <a *ngFor="let item of topComics">
     <div class="comics_items">
-      <img src="{{dashItems.poster}}"/>
+      <img src="{{item.poster}}"/>
     </div>
   </a>
 </div>

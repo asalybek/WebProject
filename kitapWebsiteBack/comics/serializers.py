@@ -20,6 +20,7 @@ class ComicsContentSerializer(serializers.ModelSerializer):
 class ComicsSerializer2(serializers.ModelSerializer):
     category = ComicsCategorySerializer2(read_only=True)
     content = ComicsContentSerializer(read_only=True)
+
     class Meta:
         model = Comics
         fields = ('id', 'name', 'poster', 'rating', 'category', 'category_id', 'content', 'content_id',)

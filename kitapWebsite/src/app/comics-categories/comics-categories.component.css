@@ -56,3 +56,20 @@ input{
   font-weight: bold;
   font-size: 16px;
 }
+button {
+  width: fit-content;
+  font-family: kitap-font-regular;
+  background-color: #FFF;
+  border: none;
+  border-radius: 2px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: sandybrown;
+}
+button:hover{
+  background-color: sandybrown;
+  color: #FFFFFF;
+  border-color:#fe793c ;
+}

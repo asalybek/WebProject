@@ -14,3 +14,10 @@ def category_comics(request, category_id):
         comics = comics_category.comics_set.all()
         serializer = ComicsSerializer2(comics, many=True)
         return Response(serializer.data)
+
+
+@api_view(['GET'])
+def comics_top_six(request):
+    comics = Comics.objects.order_by('-rating')
+    serializer = ComicsSerializer2(comics, many=True)
+    return Response(serializer.data[0:6])

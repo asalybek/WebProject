@@ -20,7 +20,4 @@ export class BooksCategoriesService {
   getBooksByCategory(name: string): Observable<Book[]> {
     return of(books.filter(book => book.book_category_name === name));
   }
-  getAllItems(): Observable<DashboardItems[]>{
-    return of(dashList);
-  }
 }

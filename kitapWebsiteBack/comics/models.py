@@ -29,6 +29,6 @@ class ComicsContent(models.Model):
 class Comics(models.Model):
     poster = models.TextField(default="")
     name = models.CharField(max_length=300, default="")
-    category = models.ForeignKey(ComicsCategory, on_delete=models.CASCADE, default=None, null=True)
+    category = models.ForeignKey(ComicsCategory, on_delete=models.CASCADE, default=1)
     rating = models.FloatField(default=5)
     content = models.ForeignKey(ComicsContent, on_delete=models.CASCADE, default=None, null=True)
