@@ -30,10 +30,10 @@ export class ComicsService {
   getCategoryType(): Observable<ComicsCategories[]>{
     return this.http.get<ComicsCategories[]>(`${this.BASE_URL}/comics/`);
   }
-  // getComicsByCategory(id: number): Observable<Comics[]> {
-  //   return this.http.get<Comics[]>(`${this.BASE_URL}/comics/${id}/all`);
-  // }
   getComicsList(): Observable<Comics[]>{
     return this.http.get<Comics[]>(`${this.BASE_URL}/comics/all`);
+  }
+  setRating(rating: number, categoryId: number, id: number): Observable<Comics>{
+    return this.http.put<Comics>(`${this.BASE_URL}/comics/${categoryId}/all/${id}`, {rating});
   }
 }
